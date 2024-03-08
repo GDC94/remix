@@ -1,3 +1,4 @@
 echo ADDING VALIDATIONS
 
 npm run pre-commit
+npm run update-changelog

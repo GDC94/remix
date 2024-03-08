@@ -15,7 +15,10 @@
     "formatter": "npm run lint -- --fix",
     "prepare": "husky install",
     "pre-commit": "npm run lint -- --fix",
-    "commit-msg": "npx --no -- commitlint --edit ${1}"
+    "commit-msg": "npx --no -- commitlint --edit ${1}",
+    "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0",
+    "update-changelog": "npm run changelog && git add CHANGELOG.md"
+    
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",
