@@ -1,3 +1,11 @@
+## <small>2.0.1 (2024-03-08)</small>
+
+* chore: adding hook to update clog ([3d0ed88](https://github.com/GDC94/remix/commit/3d0ed88))
+* chore: delete button of index ([c6d3aac](https://github.com/GDC94/remix/commit/c6d3aac))
+* chore: delete button of index ([69b08bf](https://github.com/GDC94/remix/commit/69b08bf))
+
+
+
 ## 2.0.0 (2024-03-08)
 
 * 2.0.0 ([8de8506](https://github.com/GDC94/remix/commit/8de8506))
