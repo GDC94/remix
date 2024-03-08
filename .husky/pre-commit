@@ -1,0 +1,3 @@
+echo ADDING VALIDATIONS
+
+npm run pre-commit
