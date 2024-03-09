@@ -1,2 +1,0 @@
-echo 'VALIDATIONS'
-npm run pre-commit
