@@ -1,2 +1,2 @@
-
+echo VALIDATING COMMIT MSG
 npm run commit-msg
