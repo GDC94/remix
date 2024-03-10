@@ -1,3 +1,10 @@
+## <small>2.0.2 (2024-03-10)</small>
+
+* docs: adding legend in commit-msg commit ([0efa598](https://github.com/GDC94/remix/commit/0efa598))
+* chore: deleting folder ([38ce7a3](https://github.com/GDC94/remix/commit/38ce7a3))
+
+
+
 ## <small>2.0.1 (2024-03-08)</small>
 
 * 2.0.1 ([5b90e62](https://github.com/GDC94/remix/commit/5b90e62))
