@@ -3,9 +3,10 @@ module.exports = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./app/components/**/*.{js,ts,jsx,tsx,css}",
   ],
   prefix: "",
   theme: {
@@ -19,12 +20,12 @@ module.exports = {
     extend: {
       keyframes: {
         "accordion-down": {
-          from: {height: "0"},
-          to: {height: "var(--radix-accordion-content-height)"},
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {height: "var(--radix-accordion-content-height)"},
-          to: {height: "0"},
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {

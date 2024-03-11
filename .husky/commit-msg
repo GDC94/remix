@@ -1,2 +1,52 @@
-echo VALIDATING COMMIT MSG
-npm run commit-msg
+#!/bin/sh
+
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+NC='\033[0m'
+BLUE='\033[0;34m'
+
+print_error() {
+  printf "${RED}Error: $1${NC}\n"
+}
+
+print_warning() {
+  printf "${YELLOW}----> $1${NC}\n"
+}
+print_warning_lines() {
+  printf "${YELLOW}-----------------------------------------------------------------------------$1${NC}\n"
+}
+print_success() {
+  printf "${GREEN}Success: $1${NC}\n"
+}
+print_example() {
+  printf "${BLUE}EXAMPLE: $1${NC}\n"
+}
+print_error_lines() {
+  printf "${RED}================================================================= $1${NC}\n"
+}
+
+if ! head -1 "$1" | grep -qE "^(feat|fix|chore|docs|test|style|refactor|perf|build|ci|revert)(\(.+?\))?: .{1,}$"; then
+    print_error_lines
+    print_error "❌ ⚠️ Aborting commit. Your commit message is invalid ⚠️ ❌."
+    print_error_lines
+    print_warning_lines
+    print_example "The options are →:"
+    print_warning "🚀 feat: (new feature for the user, not a new feature for build script)"
+    print_warning "💣 fix: (bug fix for the user, not a fix to a build script)"
+    print_warning "📖 docs: (changes to the documentation)"
+    print_warning "💅 style: (formatting, missing semicolons, etc; no production code change)"
+    print_warning "🛠️ refactor: (refactoring production code, eg. renaming a variable)"
+    print_warning "💡 test: (adding missing tests, refactoring tests; no production code change)"
+    print_warning "🚅 perf: (optimize image loading using lazy loading)"
+    print_warning "📎 chore: (updating grunt tasks etc; no production code change)"
+    print_warning_lines
+    print_example "git commit -m \"refactor: simplify error handling logic\"."
+    print_warning_lines
+    exit 1
+fi
+
+if ! head -1 "$1" | grep -qE "^.{1,88}$"; then
+    print_error "Aborting commit. Your commit message is too long."
+    exit 1
+fi
