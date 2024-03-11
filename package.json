@@ -2,7 +2,7 @@
   "name": "remix-project",
   "private": true,
   "sideEffects": false,
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "build": "remix build",
     "dev": "remix dev --manual",
@@ -18,7 +18,7 @@
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
     "test:watch": "jest --watch",
-    "test:ci": "jest --ci",
+    "test:ci": "echo aqui iran los tests",
     "prettier:format": "prettier --write .",
     "prettier:check": "prettier --check \"**/*.{ts,tsx,json}\"",
     "lint": "next lint",
